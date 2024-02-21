@@ -75,11 +75,14 @@ public:
     void loadFromFile(const std::string& fileName)
     {
         std::ifstream fin(fileName);
-        std::string temp;
+        std::string firstName, lastName;
+        int id;
+        float avg;
 
-        while (fin >> temp)
+        while (fin >> firstName)
         {
-            std::cout << temp << std::endl;
+            fin >> lastName >> id >> avg;
+            addStudent(Student(firstName, lastName, id, avg));
         }
     }
 
