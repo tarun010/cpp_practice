@@ -1,7 +1,7 @@
 #include <iostream>
-
-int main (int argc, char *argv[])
-{
-    std::cout << "Hello, world!\n";
-    return 0;
+using namespace std;
+int main() {
+  int a=1;
+  cout<<(a++)*(++a)<<endl;
+  return 0;
 }
